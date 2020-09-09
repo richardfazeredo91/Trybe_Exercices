@@ -57,12 +57,19 @@
   </head>
   <body>
     <script>
+      let bodyOfPage = document.querySelector('body');
       let mainTitle = document.createElement('h1');
-      document.querySelector('body').appendChild(mainTitle);
+      bodyOfPage.appendChild(mainTitle);
       
-      let firstDiv = document.createElement('div')
-      document.querySelector('body').appendChild(firstDiv);
+      let firstDiv = document.createElement('div');
       firstDiv.setAttribute('class','main-content');
+      bodyOfPage.appendChild(firstDiv);
+
+      let secondDiv = document.createElement('div');
+      secondDiv.setAttribute('class', 'center-content');
+      bodyOfPage.firstDiv.appendChild(secondDiv);
+
+     
     </script>
   </body>
 </html>
