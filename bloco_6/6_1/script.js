@@ -33,3 +33,24 @@ states.forEach(element => {
   let option = document.createElement('option');
   dropdown.appendChild(option).innerText = element
 });
+
+let date = document.getElementById('date').value;
+
+function validatesDate (date) {
+  let arr = date.split('/');
+  let day = parseInt(arr[0]); 
+  let month = parseInt(arr[1]);
+  let year = parseInt(arr[2]);
+  
+  let result =
+    ((day > 0 && day <= 31) &&
+    (month > 0 && month <= 12) &&
+    (year >= 0)) ? `${day}/${month}/${year}` :
+    'Você informou uma data inválida!';
+
+  return result;
+}
+
+console.log(validatesDate(date));
+
+

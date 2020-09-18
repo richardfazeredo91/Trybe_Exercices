@@ -12,6 +12,9 @@
   </header>
   
   <fieldset>
+    <legend>
+      Dados pessoais
+    </legend>
 
     <div class="form-field">
       <label for="">Nome:</label>
@@ -50,6 +53,41 @@
       <input type="radio" name="logradouro" id="apartamento" required>
     </div>
 
+  </fieldset>
+
+  <fieldset>
+    <legend>
+      Dados do último emprego
+    </legend>
+
+    <div class="form-field">
+      <label for="">Resumo do currículo:</label>
+      <textarea maxlength="1000" cols="30" rows="10" required> 
+      </textarea>
+    </div>
+
+    <div class="form-field">
+      <label for="">cargo</label>
+      <input type="text" maxlength="40" required>
+    </div>
+
+    <div class="form-field">
+      <label for="">Descrição do cargo</label>
+      <input type="text" maxlength="500" required>
+    </div>
+
+    <div class="form-field">
+      <label for="">Data de início</label>
+      <input type="text" 
+      name ="date" 
+      id="date" 
+      maxlength="10" 
+      value="11/12/1990" 
+      required>
+    </div>
+
+    <button type="submit">Enviar</button>
+    
   </fieldset>
 
   <script src="./script.js"></script>
