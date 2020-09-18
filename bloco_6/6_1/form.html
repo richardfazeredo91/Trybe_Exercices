@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de currículo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Cadastre seu currículo</h1>
+  </header>
+  
+  <fieldset>
+
+    <div class="form-field">
+      <label for="">Nome:</label>
+      <input type="text" maxlength="40" required>
+    </div>
+
+    <div class="form-field">
+      <label for="">E-mail:</label>
+      <input type="text" maxlength="50" required>
+    </div>
+
+    <div class="form-field">
+      <label for="">CPF:</label>
+      <input type="text" maxlength="11" required>
+    </div>
+
+    <div class="form-field">
+      <label for="">Endereço:</label>
+      <input type="text" maxlength="200" required>
+    </div>
+
+    <div class="form-field">
+      <label for="">Cidade:</label>
+      <input type="text" maxlength="28" required>
+    </div>
+    
+    <div class="form-field">
+      <label for="">Estado:</label>
+      <select class="dropdown" required></select>
+    </div>
+    
+    <div class="form-field">
+      <label for="casa">Casa</label>
+      <input type="radio" name="logradouro" id="casa" required> 
+      <label for="apartamento">Apartamento</label>
+      <input type="radio" name="logradouro" id="apartamento" required>
+    </div>
+
+  </fieldset>
+
+  <script src="./script.js"></script>
+</body>
+</html>
