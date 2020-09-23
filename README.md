@@ -1,3 +1,1 @@
-Repositório com os exercícios da Trybe 
-
-Este repositório foi criado para hospante o curso.
+Site fonte pelo qual realizei os exercícios: https://flexboxfroggy.com/
