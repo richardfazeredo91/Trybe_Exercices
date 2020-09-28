@@ -23,3 +23,5 @@ const addProperty = (object, key, value) => object[key] = value;
 const getKeysInObject = object => Object.keys(object);
 
 const getLengthOfObject = object => Object.keys(object).length;
+
+const getValuesInObject = object => Object.values(object);
