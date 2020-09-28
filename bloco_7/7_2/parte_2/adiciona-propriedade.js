@@ -20,3 +20,5 @@ const lesson3 = {
 
 const addProperty = (object, key, value) => object[key] = value;
 
+const getKeysInObject = object => Object.keys(object);
+
