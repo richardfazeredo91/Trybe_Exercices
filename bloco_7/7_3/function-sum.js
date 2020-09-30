@@ -1,8 +1,14 @@
 const assert = require('assert');
 
-const sum = (a, b) => a + b;
+function sum(a, b) {
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    throw new Error('parameters must be numbers');
+  }
+
+  return a + b;
+}
 
 assert.strictEqual(sum(4, 5), 9, `Erro! O resultado esperado era 9.`);
 assert.strictEqual(sum(0, 0), 0, `Erro! O resultado esperado era 0.`);
-assert.strictEqual(sum(4, "5"), 0, `Erro! Operações matemáticas com strings não são possíveis.`);
-assert.strictEqual(sum(4, "5"), 0, `parameters must be numbers`);
+assert.strictEqual(sum(4, "5"), 9);
+assert.throws(sum(4, "5"), Error);
