@@ -10,7 +10,7 @@ const getMarsTemperature = () => {
 const sendMarsTemperature = (callback) => {
   return setTimeout(() => {
     console.log(`Mars temperature is: ${callback()} degree Celsius`)
-  }), messageDelay;
+  }, messageDelay());
 }
 
 
