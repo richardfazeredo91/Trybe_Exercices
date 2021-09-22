@@ -20,10 +20,9 @@ db.clientes.aggregate(
   },
   {
     $match: {
-      {
-        idade: {
-          $gte: 18,
-          $lte: 25,
+      idade: {
+        $gte: 18,
+        $lte: 25,
       },
     },
   },
