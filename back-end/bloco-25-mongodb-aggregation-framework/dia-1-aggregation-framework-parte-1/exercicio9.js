@@ -20,3 +20,4 @@ db.vendas.aggregate(
     },
   ],
 );
+
