@@ -1,20 +1,25 @@
 use('erp');
 
-db.clientes.aggregate(
+db.vendas.aggregate(
   [
     {
-      $group: {
-        _id: { sexo: "$sexo", uf: "$endereco.uf" },
-        total: { $sum: 1 },
-      }
+      $match: {
+        status: { $in: ["ENTREGUE", "EM SEPARACAO"] },
+      },
     },
     {
-      $project: {
-        _id: 0,
-        estado: "$_id.uf",
-        sexo: "$_id.sexo",
-        total: '$total',
-      }
-    }
+      $group: {
+        _id: "$clienteId",
+        valorEmGastos: { $sum: "$valorTotal" },
+      },
+    },
+    {
+      $sort: {
+        valorTotal: -1
+      },
+    },
+    {
+      $limit: 5,
+    },
   ],
 );
