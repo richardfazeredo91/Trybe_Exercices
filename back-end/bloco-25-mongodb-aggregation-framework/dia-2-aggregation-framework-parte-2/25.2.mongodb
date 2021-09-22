@@ -1,0 +1,30 @@
+use('erp');
+// db.clientes.aggregate();
+
+db['clientes'].aggregate(
+  {
+    $addFields: {
+      msToDay: 24 * 60 * 60 * 1000,
+    }
+  },
+  {
+    $addFields: {
+      nasc: { $toInt: "$dataNascimento" },
+    }
+  },
+  {
+    $project: {
+      idade: {
+        $subtract: [
+          "$$NOW",
+          {
+            $divide: [
+              "$nasc",
+              "$msToDay"
+            ]
+          },
+        ]
+      },
+    }
+  }
+);
