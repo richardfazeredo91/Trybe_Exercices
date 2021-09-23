@@ -28,14 +28,6 @@ db.clientes.aggregate(
       },
     },
     {
-      $lookup: {
-        from: 'vendas',
-        localField: 'clienteId',
-        foreignField: 'clienteId',
-        as: 'compras',
-      },
-    },
-    {
       $match: {
         "compras.dataVenda": {
           $gte: ISODate('2019-06-01'),
