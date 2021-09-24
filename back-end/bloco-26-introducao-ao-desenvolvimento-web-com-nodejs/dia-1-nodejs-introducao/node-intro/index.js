@@ -4,6 +4,7 @@ const scripts = [
   { id: "1", nome: "Calculadora de IMC", script: "./imc.js" },
   { id: "2", nome: "Jogo de advinhação", script: "./sorteio.js" },
   { id: "3", nome: "Calculadora de VM/h", script: "./velocidade.js" },
+  { id: "4", nome: "Calculadora de Fatorial", script: "./fatorial.js" },
 ];
 
 function runSelectedScript() {
