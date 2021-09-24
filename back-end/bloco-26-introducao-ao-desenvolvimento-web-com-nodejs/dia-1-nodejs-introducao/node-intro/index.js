@@ -1,3 +1,27 @@
 const readline = require('readline-sync');
 
-const chosenScript = readline.question('Qual dos scripts deseja executar? ');
+const scripts = [
+  { id: "1", nome: "Calculadora de IMC", script: "./imc.js" },
+  { id: "2", nome: "Jogo de advinhação", script: "./sorteio.js" },
+  { id: "3", nome: "Calculadora de VM/h", script: "./velocidade.js" },
+];
+
+function runSelectedScript() {
+  scripts.forEach(script => {
+    console.log(`Script ${ script.id }: ${ script.nome }`);
+  });
+
+  let chosenScript = readline
+    .questionInt('Insira o número do script que deseja executar: ');
+
+  if (chosenScript > scripts.length || chosenScript <= 0) {
+    console.log('Você escolheu um número de script que não existe!');
+    return;
+  };
+
+  const { script } = scripts[chosenScript - 1];
+
+  require(script);
+}
+
+runSelectedScript();
