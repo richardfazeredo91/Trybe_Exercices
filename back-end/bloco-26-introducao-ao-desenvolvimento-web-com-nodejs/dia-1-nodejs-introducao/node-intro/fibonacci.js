@@ -15,8 +15,8 @@ function getFibonacci() {
   while(sequence.length < number) {
     const calcNext = () => {
       const twoLast = sequence.slice(-2);
-      const sum = twoLast[0] + twoLast[1];
-      return sum;
+      const getNextValue = twoLast[0] + twoLast[1];
+      return getNextValue;
     };
 
     sequence.push(calcNext());
