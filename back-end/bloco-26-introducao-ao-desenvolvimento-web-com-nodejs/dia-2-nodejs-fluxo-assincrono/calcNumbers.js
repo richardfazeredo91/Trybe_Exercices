@@ -24,3 +24,5 @@ calcNumbers(1, 2, 'a')
 calcNumbers(20, 2, 3)
   .then(data => console.log(`O resultado da operação é: ${ data }`))
   .catch(err => console.log(`Erro: ${ err.message }`));
+
+module.exports = calcNumbers;
