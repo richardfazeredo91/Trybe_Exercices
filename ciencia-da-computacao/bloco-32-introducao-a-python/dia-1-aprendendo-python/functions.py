@@ -23,3 +23,16 @@ def get_biggest_name(names):
         if len(name) > len(biggest_name):
             biggest_name = name
     return biggest_name
+
+def get_liters_and_price(meters):
+    import math
+
+    liters_per_can = 18
+    meters_per_can = liters_per_can * 3
+    number_of_cans = math.ceil(meters / meters_per_can) 
+    total_price = round(80.00 * number_of_cans, 2)
+
+    material = (number_of_cans, 'R$ '+ str(total_price) + '0')
+    return material
+
+print (get_liters_and_price(1000))
