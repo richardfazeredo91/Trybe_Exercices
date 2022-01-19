@@ -32,7 +32,15 @@ def get_liters_and_price(meters):
     number_of_cans = math.ceil(meters / meters_per_can) 
     total_price = round(80.00 * number_of_cans, 2)
 
-    material = (number_of_cans, 'R$ '+ str(total_price) + '0')
+    material = (number_of_cans, f"R$: {str(total_price)}0")
     return material
 
-print (get_liters_and_price(1000))
+def is_triangle_or_not(size1, size2, size3):
+    if (size1 + size2) < size3:
+        return 'Não é um triângulo'
+    elif size1 == size2 == size3:
+        return 'É um triângulo equilátero.'
+    elif size1 == size2 or size2 == size3 or size1 == size3:
+        return 'É um triângulo isósceles.'
+    else:
+        return 'É um triângulo escaleno.'
