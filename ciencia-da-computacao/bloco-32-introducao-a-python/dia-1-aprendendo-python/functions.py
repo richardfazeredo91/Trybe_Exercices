@@ -49,8 +49,8 @@ def is_triangle_or_not(size1, size2, size3):
 
 def get_smallest_number(numbers):
     smallest_number = numbers[0]
-    for number, i in enumerate(numbers):
-        if number != 0:
-            if i < smallest_number:
-                smallest_number = i
+    for c, number in enumerate(numbers):
+        if c != 0:
+            if number < smallest_number:
+                smallest_number = number
     return smallest_number
