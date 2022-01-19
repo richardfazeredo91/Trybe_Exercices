@@ -44,3 +44,13 @@ def is_triangle_or_not(size1, size2, size3):
         return 'É um triângulo isósceles.'
     else:
         return 'É um triângulo escaleno.'
+
+# Bônus
+
+def get_smallest_number(numbers):
+    smallest_number = numbers[0]
+    for number, i in enumerate(numbers):
+        if number != 0:
+            if i < smallest_number:
+                smallest_number = i
+    return smallest_number
