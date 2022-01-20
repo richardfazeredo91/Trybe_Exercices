@@ -54,3 +54,12 @@ def get_smallest_number(numbers):
             if number < smallest_number:
                 smallest_number = number
     return smallest_number
+
+def get_left_triangle_asterisks(size):
+    if size < 2:
+        return 'O tamanho informado precisa ser maior que 1!'
+
+    left_triangle = ''
+    for number in range(1, size + 1):
+        left_triangle += f"{number * '*'}\n"
+    return left_triangle
