@@ -63,3 +63,9 @@ def get_left_triangle_asterisks(size):
     for number in range(1, size + 1):
         left_triangle += f"{number * '*'}\n"
     return left_triangle
+
+def get_summation(number):
+    total = 0
+    for num in range(1, number + 1):
+        total += num
+    return total
