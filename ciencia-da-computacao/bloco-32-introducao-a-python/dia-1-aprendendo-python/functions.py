@@ -69,3 +69,22 @@ def get_summation(number):
     for num in range(1, number + 1):
         total += num
     return total
+
+def get_fuel_and_price_per_liter(liters, fuel):
+    types_of_fuel = { "A": ("álcool", 2.50), "G": ("gasolina", 1,90) }
+    total = types_of_fuel[fuel][1] * liters
+    discount = 0.00
+
+    if fuel == "A":
+        if liters <= 20:
+            discount = 0.03
+        else:
+            discount = 0.05
+    else:
+        if liters <= 20:
+            discount = 0.04
+        else:
+            discount = 0.06
+    
+    total_with_discount = round(total - (total * discount), 2)
+    return total_with_discount
